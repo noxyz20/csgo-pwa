@@ -1,0 +1,26 @@
+<div class="px-4 py-2 mb-20">
+    <h1 class="text-white text-3xl font-bold">Results</h1>
+    <div class="flex flex-col mt-6 rounded-xl bg-gray-800 p-4" *ngFor="let result of results">
+        <div class="flex flex-row text-xs items-center">
+            <img class="w-6" src="{{result.event.logo}}">
+            <p class="text-gray-600 ml-2">{{result.event.name}}</p>
+        </div>
+        <div class="flex flex-row items-center">
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center mt-2" *ngFor="let team of result.teams">
+                    <img class="w-6" src="{{team.logo}}">
+                    <p class="text-white font-bold ml-2">{{team.name}}</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse">
+                <div class="flex-col mr-4 text-center">
+                    <p class="text-white text-lg mb-1">{{ result.teams[0].result }}</p>
+                    <p class="text-white text-lg">{{ result.teams[1].result }}</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</div>

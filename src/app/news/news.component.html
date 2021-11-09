@@ -1,0 +1,18 @@
+<div class="px-4 py-2 mb-20">
+    <h1 class="text-white text-2xl font-bold">Today's News</h1>
+    <div class="flex flex-col mt-4" *ngFor="let new of news">
+        <div class="flex flex-row w-full">
+            <div class="flex flex-col px-2">
+                <div class="flex flex-row text-gray-400 text-sm font-medium">
+                    <p>{{new.time | date: 'dd/MM/yyyy - hh:mm'}}</p>
+                </div>
+                <div class="text-white font-medium">
+                    {{new.title}}
+                </div>
+            </div>
+        </div>
+        <hr class="border-dashed mt-4 border-gray-600">
+    </div>
+
+    
+</div>

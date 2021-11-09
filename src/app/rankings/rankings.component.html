@@ -1,0 +1,20 @@
+<div class="px-4 py-2 mb-20">
+    <h1 class="text-white text-3xl font-bold">Rankings</h1>
+    <div class="flex flex-col mt-2 rounded bg-gray-800 p-4" *ngFor="let rank of ranks">
+        <div class="flex flex-row">
+            <p class="text-gray-300 mr-4">{{rank.ranking}}</p>
+            <img class="w-6" src="{{rank.logo}}">
+            <p class="text-white font-bold ml-2">{{rank.name}}</p>
+        </div>
+        <div class="flex flex-row" *ngIf="rank.ranking == 1">
+            <div class="flex flex-row w-1/5 mt-1" *ngFor="let player of rank.players">
+                <div class="flex flex-col px-1">
+                    <img class="w-16" src="{{player.image}}">
+                    <p class="text-white text-2xs font-bold ml-1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>

@@ -1,0 +1,26 @@
+<div class="px-4 py-2 mb-20">
+    <h1 class="text-white text-3xl font-bold">Matches</h1>
+    <div class="flex flex-col mt-6 rounded-xl bg-gray-800 p-4" *ngFor="let match of matchs">
+        <div class="flex flex-row text-xs items-center">
+            <img class="w-6" src="{{match.event.logo}}">
+            <p class="text-gray-600 ml-2">{{match.event.name}}</p>
+        </div>
+        <div class="flex flex-row items-center">
+            <div class="flex flex-col">
+                <div class="flex flex-row items-center mt-2" *ngFor="let team of match.teams">
+                    <img class="w-6" src="{{team.logo}}">
+                    <p class="text-white font-bold ml-2">{{team.name}}</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row-reverse">
+                <div class="flex-col mr-4 text-center">
+                    <p class="text-white font-bold text-xl">{{match.time |  date: 'dd/MM'}}</p>
+                    <p class="text-gray-600">{{match.time |  date: 'hh:mm'}}</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</div>
