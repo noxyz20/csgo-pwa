@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/csgo-pwa",
     "ignore": [
       "firebase.json",
       "**/.*",
